@@ -31,3 +31,4 @@ This submission was originally made on 23 October 2020. I was able to save local
 This submission is licensed under CC-BY 4.0. You can do whatever you want with it as long as attribution is given. The technical questions included as part of this challenge belong to Coderbyte and I claim no copyright over them. I have decided not to disclose the name of the company for privacy reasons. Any 3rd-party assets involved that I have not already mentioned are property of their respective owners.
 
 ![CC-BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)
+
