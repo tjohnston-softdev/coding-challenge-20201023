@@ -32,5 +32,5 @@ console.log(FirstReverse(readline()));
 **Previous:**  
 **Next:** [Question 2](./2-capitalize_words.md)
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)

@@ -23,5 +23,5 @@ console.log(TimeConvert(readline()));
 **Previous:** [Question 2](./2-capitalize_words.md)  
 **Next:** [Question 4](./4-palindrone.md)
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)

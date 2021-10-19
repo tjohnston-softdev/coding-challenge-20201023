@@ -39,5 +39,5 @@ console.log(LetterCapitalize(readline()));
 **Previous:** [Question 1](./1-reverse_string.md)  
 **Next:** [Question 3](./3-time_string.md)
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)

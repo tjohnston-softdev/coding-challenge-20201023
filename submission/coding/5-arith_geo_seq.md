@@ -127,5 +127,5 @@ console.log(ArithGeoII(readline()));
 **Previous:** [Question 4](./4-palindrone.md)  
 **Next:** [Question 6](./6-unique_substr.md)
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)

@@ -83,5 +83,5 @@ console.log(KUniqueCharacters(readline()));
 **Previous:** [Question 5](./5-arith_geo_seq.md)  
 **Next:**
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)

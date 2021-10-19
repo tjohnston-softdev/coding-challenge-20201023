@@ -48,5 +48,5 @@ console.log(PalindromeTwo(readline()));
 **Previous:** [Question 3](./3-time_string.md)  
 **Next:** [Question 5](./5-arith_geo_seq.md)
 
-[Contents](./readme.md)  
+[Coding Questions](./readme.md)  
 [Return to Index](../../readme.md)
