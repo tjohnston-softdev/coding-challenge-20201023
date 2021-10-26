@@ -1,14 +1,15 @@
 # Changelog
 
-**./submission/coding/1-reverse_string.md**
+**./submission/coding/2-capitalize_words.md**
 * Declared 'stringRes' result variable.
 	* Replaces 'str' re-assignment.
-	* Consumes `charList.join("");`
+	* Consumes `wordList.join(" ");`
 	* Returned at the end of the function.
-* Replaced `console.log(FirstReverse(readline()));` with working example.
-* Actual output matches example.
+* Replaced `console.log(LetterCapitalize(readline()));` with a working example.
+	* Actual output matches example.
+* Added comments to string word loop.
 
 ---
 
 **./submission/coding/work-file.js**
-* Used to revise question 1.
+* Used to revise question 2.

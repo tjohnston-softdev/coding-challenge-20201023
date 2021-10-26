@@ -13,25 +13,33 @@ function LetterCapitalize(str) {
   var currentFirstChar = "";
   var currentOtherChars = "";
   
+  var stringRes = "";
+  
+  // Loop through unput string words.
   for (wordIndex = 0; wordIndex < wordList.length; wordIndex = wordIndex + 1)
   {
-    currentOriginalWord = wordList[wordIndex];
+    // Read current word.
+	currentOriginalWord = wordList[wordIndex];
     currentFirstChar = currentOriginalWord.charAt(0);
     currentOtherChars = currentOriginalWord.substring(1);
 
-    currentFirstChar = currentFirstChar.toUpperCase();
+    // Case letters accordingly.
+	currentFirstChar = currentFirstChar.toUpperCase();
     currentOtherChars = currentOtherChars.toLowerCase();
-
+	
+	// Update word.
     wordList[wordIndex] = currentFirstChar + currentOtherChars;
   }
-
-  str = wordList.join(" ");
-  return str; 
+  
+  // Combine individual words back into string.
+  stringRes = wordList.join(" ");
+  return stringRes; 
 
 }
    
-// keep this function call here 
-console.log(LetterCapitalize(readline()));
+// Example output
+var outputValue = LetterCapitalize("the quick brown fox jumps over the lazy dog.");
+console.log(outputValue);
 ```
 
 ---
