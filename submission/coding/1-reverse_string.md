@@ -24,7 +24,8 @@ function FirstReverse(str) {
   return stringRes;
 
 }
-   
+
+// Example output
 var outputValue = FirstReverse("quick-brown-fox");
 console.log(outputValue);
 ```
