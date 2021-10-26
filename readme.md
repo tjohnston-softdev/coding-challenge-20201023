@@ -21,8 +21,8 @@ This submission was originally made on 23 October 2020. I was able to save local
 	* [Example SQL Query](./submission/short-answers.md#what-does-the-following-sql-query-do)
 	* [Git Commands](./submission/short-answers.md#what-is-the-difference-between-git-merge-and-git-rebase)
 * [Multiple Choice](./submission/multiple-choice.md)
-	* [Set Timeout](https://github.com/tjohnston-softdev/coding-challenge-20201023/blob/master/submission/multiple-choice.md#set-timeout)
-	* [Recursive Assignment](https://github.com/tjohnston-softdev/coding-challenge-20201023/blob/master/submission/multiple-choice.md#recursive-assignment)
+	* [Set Timeout](./submission/multiple-choice.md#set-timeout)
+	* [Recursive Assignment](./submission/multiple-choice.md#recursive-assignment)
 
 ---
 
