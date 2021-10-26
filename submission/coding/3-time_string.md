@@ -6,16 +6,16 @@
 ```javascript
 function TimeConvert(num) { 
 
-  var hoursBase = num / 60;
-  var hoursRounded = Math.floor(hoursBase);
+  var hoursRounded = Math.floor(num / 60);
   var remainingMinutes = num - (hoursRounded * 60);
   var resultString = hoursRounded + ":" + remainingMinutes;
   return resultString;
 
 }
    
-// keep this function call here 
-console.log(TimeConvert(readline()));
+// Example output
+var outputValue = TimeConvert(456);
+console.log(outputValue);
 ```
 
 ---
