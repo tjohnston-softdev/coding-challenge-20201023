@@ -1,3 +1,3 @@
 # Changelog
 
-Initialized changelog.
+Opened 'revision' branch.
