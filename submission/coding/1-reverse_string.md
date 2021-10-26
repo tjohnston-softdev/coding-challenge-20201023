@@ -17,14 +17,16 @@ function FirstReverse(str) {
 
   
   var charList = str.split("");
+  var stringRes = "";
+  
   charList.reverse();
-  str = charList.join("");
-  return str;
+  stringRes = charList.join("");
+  return stringRes;
 
 }
    
-// keep this function call here 
-console.log(FirstReverse(readline()));
+var outputValue = FirstReverse("quick-brown-fox");
+console.log(outputValue);
 ```
 
 ---
