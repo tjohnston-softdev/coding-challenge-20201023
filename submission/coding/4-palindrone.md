@@ -11,17 +11,24 @@
 
 function PalindromeTwo(str) { 
   var removeRegex = /[^A-Za-z0-9]/gi;
-  var preparedOriginal = str.replace(removeRegex, "");
+  var preparedOriginal = "";
   
   var preparedReverse = "";
   var palindromeRes = false;
 
+  
+  // Prepare input string by removing casing and unaffected characters.
+  preparedOriginal = str.replace(removeRegex, "");
   preparedOriginal = preparedOriginal.toLowerCase();
+  
+  // Reverses input string.
   preparedReverse = getReverse(preparedOriginal);
 
+  
   if (preparedOriginal === preparedReverse)
   {
-    palindromeRes = true;
+    // Reverse matches original.
+	palindromeRes = true;
   }
 
   return palindromeRes;
@@ -29,18 +36,20 @@ function PalindromeTwo(str) {
 
 
 // Reverses string
-function getReverse(s)
+function getReverse(str)
 {
-  var cList = s.split("");
+  var charList = str.split("");
   var reverseRes = "";
 
-  cList.reverse();
-  reverseRes = cList.join("");
+  charList.reverse();
+  reverseRes = charList.join("");
   return reverseRes;
 }
-   
-// keep this function call here 
-console.log(PalindromeTwo(readline()));
+
+
+// Example output
+var outputValue = PalindromeTwo("tacocat");
+console.log(outputValue);
 ```
 
 ---
