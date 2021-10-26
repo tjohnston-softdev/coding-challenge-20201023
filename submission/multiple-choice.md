@@ -2,7 +2,9 @@
 
 ---
 
-### What will the following JavaScript code output?
+### Set Timeout
+
+What will the following JavaScript code output?
 
 ```javascript
 var i = 0;
@@ -24,7 +26,9 @@ for (i = 0; i < 3; i = i + 1)
 
 ---
 
-### What will the following JavaScript code output?
+### Recursive Assignment
+
+What will the following JavaScript code output?
 
 ```javascript
 var a = b = 5;
