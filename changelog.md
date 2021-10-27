@@ -1,15 +1,10 @@
 # Changelog
 
-**./submission/coding/4-palindrome.md**
-* Main function:
-	* 'preparedOriginal' declaration and initial assignment is now separate.
-	* Added comments where applicable.
-* getReverse
-	* Renamed parameter from 's' to 'str'
-	* Renamed 'cList' variable to 'charList'
-* Replaced `console.log(PalindromeTwo(readline()));` with working example.
+**./submission/coding/6-unique_substr.md**
+* Added comments to looping code.
+* Replaced `console.log(KUniqueCharacters(readline()));` with working example.
 
 ---
 
 **./submission/coding/work-file.js**
-* Used to revise question 4.
+* Used to revise question 6.

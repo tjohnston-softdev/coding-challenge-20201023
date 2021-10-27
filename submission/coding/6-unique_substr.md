@@ -23,11 +23,13 @@ function KUniqueCharacters(str) {
 
   // Result
   var longestSubstring = "";
-
-
+  
+  // Outer loop for substring start character index.
   for (startIndex = 1; startIndex < str.length; startIndex = startIndex + 1)
   {
-    searchIndex = startIndex;
+    
+	// Begin substring.
+	searchIndex = startIndex;
     currentEnd = -1;
     currentSubstring = "";
 
@@ -36,46 +38,61 @@ function KUniqueCharacters(str) {
     currentUsed = false;
     canContinue = true;
 
-    while (searchIndex >= startIndex && searchIndex < str.length && canContinue === true)
+    
+	// Inner loop reading substring characters until there is 'k' unique characters.
+	while (searchIndex >= startIndex && searchIndex < str.length && canContinue === true)
     {
-      currentCharacter = str.charAt(searchIndex);
+      // Read current character and check if used.
+	  currentCharacter = str.charAt(searchIndex);
       currentUsed = currentUnique.includes(currentCharacter);
 
-      if (currentUsed !== true && currentUnique.length === k)
+      
+	  if (currentUsed !== true && currentUnique.length === k)
       {
-        canContinue = false;
+        // End loop, unique character limit reached.
+		canContinue = false;
       }
       else if (currentUsed !== true)
       {
-        currentUnique.push(currentCharacter);
+        // Add unique character.
+		currentUnique.push(currentCharacter);
       }
 
-      searchIndex = searchIndex + 1;
+      // Continue search.
+	  searchIndex = searchIndex + 1;
     }
 
-    if (currentUnique.length === k && searchIndex === str.length)
+    
+	// Read current substring.
+	if (currentUnique.length === k && searchIndex === str.length)
     {
-      currentSubstring = str.substring(startIndex);
+      // End of string reached, read from start onwards.
+	  currentSubstring = str.substring(startIndex);
     }
     else if (currentUnique.length === k)
     {
-      currentEnd = searchIndex - 1;
+      // Read substring from boundaries.
+	  currentEnd = searchIndex - 1;
       currentSubstring = str.substring(startIndex, currentEnd);
     }
 
-    if (currentSubstring.length > longestSubstring.length)
+    
+	// Update longest substring.
+	if (currentSubstring.length > longestSubstring.length)
     {
       longestSubstring = currentSubstring;
     }
-
+	
+	
   }
 
 
   return longestSubstring;
 }
    
-// keep this function call here 
-console.log(KUniqueCharacters(readline()));
+// Example output
+var outputValue = KUniqueCharacters("4thequickbrownfoxjumpsoverthelazydog");
+console.log(outputValue);
 ```
 
 ---
