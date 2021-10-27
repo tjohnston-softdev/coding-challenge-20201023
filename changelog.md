@@ -1,10 +1,9 @@
 # Changelog
 
-**./submission/coding/6-unique_substr.md**
-* Added comments to looping code.
-* Replaced `console.log(KUniqueCharacters(readline()));` with working example.
+**./submission/coding/5-arith_geo_seq.md**
+* Marked for revision.
 
 ---
 
 **./submission/coding/work-file.js**
-* Used to revise question 6.
+* Question 5 to be revised.

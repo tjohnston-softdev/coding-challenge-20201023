@@ -1,89 +1,119 @@
-function KUniqueCharacters(str) { 
+function ArithGeoII(arr) { 
 
-  var firstChar = str.charAt(0);
-  var k = Number(firstChar);
+  var arithmeticUsed = testArithmetic(arr);
+  var geometricUsed = testGeometric(arr);
+  var result = -1;
 
-  // Main loop variables
-  var startIndex = 1;
-  var searchIndex = null;
-  var currentEnd = -1;
-  var currentSubstring = "";
-
-  // Sub loop variables
-  var currentCharacter = "";
-  var currentUnique = [];
-  var currentUsed = false;
-  var canContinue = false;
-
-  // Result
-  var longestSubstring = "";
-  
-  // Outer loop for substring start character index.
-  for (startIndex = 1; startIndex < str.length; startIndex = startIndex + 1)
+  if (arithmeticUsed === true)
   {
-    
-	// Begin substring.
-	searchIndex = startIndex;
-    currentEnd = -1;
-    currentSubstring = "";
-
-    currentCharacter = "";
-    currentUnique = [];
-    currentUsed = false;
-    canContinue = true;
-
-    
-	// Inner loop reading substring characters until there is 'k' unique characters.
-	while (searchIndex >= startIndex && searchIndex < str.length && canContinue === true)
-    {
-      // Read current character and check if used.
-	  currentCharacter = str.charAt(searchIndex);
-      currentUsed = currentUnique.includes(currentCharacter);
-
-      
-	  if (currentUsed !== true && currentUnique.length === k)
-      {
-        // End loop, unique character limit reached.
-		canContinue = false;
-      }
-      else if (currentUsed !== true)
-      {
-        // Add unique character.
-		currentUnique.push(currentCharacter);
-      }
-
-      // Continue search.
-	  searchIndex = searchIndex + 1;
-    }
-
-    
-	// Read current substring.
-	if (currentUnique.length === k && searchIndex === str.length)
-    {
-      // End of string reached, read from start onwards.
-	  currentSubstring = str.substring(startIndex);
-    }
-    else if (currentUnique.length === k)
-    {
-      // Read substring from boundaries.
-	  currentEnd = searchIndex - 1;
-      currentSubstring = str.substring(startIndex, currentEnd);
-    }
-
-    
-	// Update longest substring.
-	if (currentSubstring.length > longestSubstring.length)
-    {
-      longestSubstring = currentSubstring;
-    }
-	
-	
+    result = "Arithmetic";
+  }
+  else if (geometricUsed === true)
+  {
+    result = "Geometric";
+  }
+  else
+  {
+    result = -1;
   }
 
-
-  return longestSubstring;
+  return result;
 }
+
+
+function testArithmetic(numberList)
+{
+  var firstNumber = Math.abs(numberList[0]);
+  var secondNumber = Math.abs(numberList[1]);
+  var targetDifference = Math.abs(secondNumber - firstNumber);
+
+  var loopIndex = 2;
+  var previousIndex = loopIndex - 1;
+  var currentNumber = -1;
+  var previousNumber = -1;
+  var currentDifference = -1;
+
+  var arithmeticValid = true;
+
+  while (loopIndex >= 2 && loopIndex < numberList.length && arithmeticValid === true)
+  {
+    currentNumber = Math.abs(numberList[loopIndex]);
+    previousNumber = Math.abs(numberList[loopIndex - 1]);
+    currentDifference = Math.abs(currentNumber - previousNumber);
+
+    if (currentDifference === targetDifference)
+    {
+      loopIndex = loopIndex + 1;
+    }
+    else
+    {
+      arithmeticValid = false;
+    }
+
+  }
+
+  return arithmeticValid;
+}
+
+
+
+function testGeometric(numberList)
+{
+  var loopIndex = 0;
+  var loopCutoff = numberList.length - 1;
+
+  var currentNumber = -1;
+  var offsetNumber = -1;
+
+  var factorNumber = 2;
+  var currentDivision = -1;
+  var offsetDivision = -1;
+  var currentWholeFlag = -1;
+  var offsetWholeFlag = -1;
+  var factorFound = false;
+
+  var geometricValid = true;
+
+  while (loopIndex >= 0 && loopIndex < loopCutoff && geometricValid === true)
+  {
+    currentNumber = Math.abs(numberList[loopIndex]);
+    offsetNumber = Math.abs(numberList[loopIndex + 1]);
+
+    factorNumber = 2;
+    currentDivision = -1;
+    offsetDivision = -1;
+    currentWholeFlag = -1;
+    offsetWholeFlag = -1;
+    factorFound = -1;
+
+    while (factorFound === -1)
+    {
+      currentDivision = currentNumber / factorNumber;
+      offsetDivision = offsetNumber / factorNumber;
+      currentWholeFlag = currentDivision % 1;
+      offsetWholeFlag = offsetDivision % 1;
+
+      if (currentWholeFlag === 0 && offsetWholeFlag === 0)
+      {
+        factorFound = factorNumber;
+      }
+
+      factorNumber = factorNumber + 1;
+    }
+
+    if (factorFound > 2)
+    {
+      loopIndex = loopIndex + 1;
+    }
+    else
+    {
+      geometricValid = false;
+    }
+  }
+
+  return geometricValid;
+}
+
    
-// Example output
-var outputValue = KUniqueCharacters("4thequickbrownfoxjumpsoverthelazydog");
-console.log(outputValue);
+// keep this function call here 
+console.log(ArithGeoII(readline()));
