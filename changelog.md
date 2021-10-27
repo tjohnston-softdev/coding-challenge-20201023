@@ -1,9 +1,8 @@
 # Changelog
 
-**./submission/coding/5-arith_geo_seq.md**
-* Marked for revision.
-
----
-
-**./submission/coding/work-file.js**
-* Question 5 to be revised.
+**./readme.md**
+* Re-worded original release date.
+	* Before: "The submission was"
+	* After: "The original submission was"
+* Added revised version release date template.
+	* "with a revised version released on"
