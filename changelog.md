@@ -1,4 +1,4 @@
 # Changelog
 
-**./submission/work-file.js**
-* Deleted file.
+**./readme.md**
+* Added release date to revised version.

@@ -2,7 +2,7 @@
 
 This is the submission for a coding challenge I was invited to complete while applying for a software development role. I was assessed on coding questions involving Node JS, short answers regarding SQL and Git, along with a couple of multiple-choice questions for inspecting console output. The challenge was hosted on [Coderbyte](https://coderbyte.com/) and had to be completed in under two hours.
 
-This submission was originally made on 23 October 2020. I was able to save local copies of my answers which I later converted to markdown on 7 October 2021. The original submission was shared publicly on 19 October 2021 with a revised version released on [date].
+This submission was originally made on 23 October 2020. I was able to save local copies of my answers which I later converted to markdown on 7 October 2021. The original submission was shared publicly on 19 October 2021 with a revised version released on 30 October 2021.
 
 ---
 
