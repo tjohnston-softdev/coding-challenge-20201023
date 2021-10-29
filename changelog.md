@@ -1,8 +1,11 @@
 # Changelog
 
-**./readme.md**
-* Re-worded original release date.
-	* Before: "The submission was"
-	* After: "The original submission was"
-* Added revised version release date template.
-	* "with a revised version released on"
+**./submission/coding/5-arith_geo_seq.md**
+* Commented out 'testGeometric' call, assumed to be False.
+* Replaced `console.log(ArithGeoII(readline()));` with working output.
+
+---
+
+**./submission/work-file.js**
+* Arithmetic sequencing works.
+* Geometric sequencing causes an infinite loop.

@@ -1,7 +1,8 @@
 function ArithGeoII(arr) { 
 
   var arithmeticUsed = testArithmetic(arr);
-  var geometricUsed = testGeometric(arr);
+  //var geometricUsed = testGeometric(arr);
+  var geometricUsed = false;
   var result = -1;
 
   if (arithmeticUsed === true)
@@ -114,6 +115,13 @@ function testGeometric(numberList)
   return geometricValid;
 }
 
-   
-// keep this function call here 
-console.log(ArithGeoII(readline()));
+
+// Example output, both types.
+
+var inputArith = [5, 7, 9, 11, 13, 15, 17];
+var inputGeo = [2, 6, 18, 54, 162, 486, 1458];
+
+var outputArith = ArithGeoII(inputArith);
+var outputGeo = ArithGeoII(inputGeo);
+
+console.log(outputArith, outputGeo);
