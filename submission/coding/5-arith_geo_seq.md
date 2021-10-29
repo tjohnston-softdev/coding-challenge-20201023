@@ -1,5 +1,8 @@
 ### Coding Question 5 - Check if a given array of numbers is a valid Arithmetic or Geometric sequence
 
+**Arithmetic Input:** [5, 7, 9, 11, 13, 15, 17]  
+**Geometric Input:** [2, 6, 18, 54, 162, 486, 1458]
+
 ```javascript
 function ArithGeoII(arr) { 
 
@@ -31,95 +34,72 @@ function testArithmetic(numberList)
   var targetDifference = Math.abs(secondNumber - firstNumber);
 
   var loopIndex = 2;
-  var previousIndex = loopIndex - 1;
   var currentNumber = -1;
   var previousNumber = -1;
   var currentDifference = -1;
 
-  var arithmeticValid = true;
+  var sequenceValid = true;
 
-  while (loopIndex >= 2 && loopIndex < numberList.length && arithmeticValid === true)
+  while (loopIndex >= 2 && loopIndex < numberList.length && sequenceValid === true)
   {
     currentNumber = Math.abs(numberList[loopIndex]);
     previousNumber = Math.abs(numberList[loopIndex - 1]);
     currentDifference = Math.abs(currentNumber - previousNumber);
 
-    if (currentDifference === targetDifference)
+    if (currentDifference !== targetDifference)
     {
-      loopIndex = loopIndex + 1;
+      sequenceValid = false;
     }
-    else
-    {
-      arithmeticValid = false;
-    }
-
+	
+	loopIndex = loopIndex + 1;
   }
 
-  return arithmeticValid;
+  return sequenceValid;
 }
 
 
 
 function testGeometric(numberList)
 {
-  var loopIndex = 0;
-  var loopCutoff = numberList.length - 1;
-
-  var currentNumber = -1;
-  var offsetNumber = -1;
-
-  var factorNumber = 2;
-  var currentDivision = -1;
-  var offsetDivision = -1;
-  var currentWholeFlag = -1;
-  var offsetWholeFlag = -1;
-  var factorFound = false;
-
-  var geometricValid = true;
-
-  while (loopIndex >= 0 && loopIndex < loopCutoff && geometricValid === true)
-  {
-    currentNumber = Math.abs(numberList[loopIndex]);
-    offsetNumber = Math.abs(numberList[loopIndex + 1]);
-
-    factorNumber = 2;
-    currentDivision = -1;
-    offsetDivision = -1;
-    currentWholeFlag = -1;
-    offsetWholeFlag = -1;
-    factorFound = -1;
-
-    while (factorFound === -1)
-    {
-      currentDivision = currentNumber / factorNumber;
-      offsetDivision = offsetNumber / factorNumber;
-      currentWholeFlag = currentDivision % 1;
-      offsetWholeFlag = offsetDivision % 1;
-
-      if (currentWholeFlag === 0 && offsetWholeFlag === 0)
-      {
-        factorFound = factorNumber;
-      }
-
-      factorNumber = factorNumber + 1;
-    }
-
-    if (factorFound > 2)
-    {
-      loopIndex = loopIndex + 1;
-    }
-    else
-    {
-      geometricValid = false;
-    }
-  }
-
-  return geometricValid;
+	var firstNumber = Math.abs(numberList[0]);
+	var secondNumber = Math.abs(numberList[1]);
+	var targetProduct = Math.abs(secondNumber / firstNumber);
+	
+	var loopIndex = 2;
+	var currentNumber = -1;
+	var previousNumber = -1;
+	var currentDifference = -1;
+	
+	var sequenceValid = true;
+	
+	while (loopIndex >= 2 && loopIndex < numberList.length && sequenceValid === true)
+	{
+		currentNumber = Math.abs(numberList[loopIndex]);
+		previousNumber = Math.abs(numberList[loopIndex - 1]);
+		currentDifference = Math.abs(currentNumber / previousNumber);
+		
+		if (currentDifference !== targetProduct)
+		{
+			sequenceValid = false;
+		}
+		
+		loopIndex = loopIndex + 1;
+	}
+	
+	return sequenceValid;
 }
 
-   
-// keep this function call here 
-console.log(ArithGeoII(readline()));
+
+// Example output, both types.
+
+var inputArith = [5, 7, 9, 11, 13, 15, 17];
+var inputGeo = [2, 6, 18, 54, 162, 486, 1458];
+
+var outputArith = ArithGeoII(inputArith);
+var outputGeo = ArithGeoII(inputGeo);
+
+console.log(outputArith, outputGeo);
+
 ```
 
 ---
